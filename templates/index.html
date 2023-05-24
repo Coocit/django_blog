@@ -1,0 +1,311 @@
+{% load my_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+    <script src="/static/vue/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <link rel="stylesheet" :href="'/static/theme/'+ theme +'.css'">
+    <nav>
+        <div class="left">
+            <a href="/">首页</a>
+            <a href="/news">新闻</a>
+            <a href="#">心情</a>
+            <a href="#">回忆录</a>
+            <a href="#">关于</a>
+            <a href="#">网站导航</a>
+        </div>
+        <div class="right">
+            <img v-show="theme === 'light'" src="/static/img/light.svg" alt="" @click="setTheme('dark')">
+            <img v-show="theme === 'dark'" src="/static/img/dark.svg" alt="" @click="setTheme('light')">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+        </div>
+    </nav>
+
+    {% banner 'index' %}
+
+    <main>
+        {% block main %}
+            <div class="main">
+            <div class="left">
+                <div class="boutique_article card">
+                    <div class="title">
+                        <h3>精选文章</h3>
+                        <div>
+                            <a href="#">查看更多</a>
+                        </div>
+                    </div>
+                    <div class="body">
+
+                    </div>
+                </div>
+
+                <div class="hotList card">
+                    <div class="title">
+                        <h3>今日热搜</h3>
+                        <div>
+                            <a href="#">查看更多</a>
+                        </div>
+                    </div>
+                    <div class="body">
+                        主要内容区域
+                    </div>
+                </div>
+
+                <div class="all_article card">
+                    <div class="title">
+                        <h3>博客文章</h3>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>
+                                <div class="left">
+                                    <div>
+                                        <img src="/static/img/slideshow1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <h2><a href="#">React基本使用</a></h2>
+                                    <p>安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react
+                                    </p>
+                                    <div class="article_info">
+                                        <span>
+                                            <i class="far fa-clock"></i>2023-05-15
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-thumbs-up"></i>231
+                                        </span>
+                                        <span>
+                                            <i class="far fa-eye"></i>0
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-comments"></i>0
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star-half-alt"></i>0
+                                        </span>
+                                    </div>
+                                    <a href="">查看详情</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <div>
+                                        <img src="/static/img/slideshow1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <h2><a href="#">React基本使用</a></h2>
+                                    <p>安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react安装react包
+                                        Python npm i react react-dom
+                                        使用react
+                                    </p>
+                                    <div class="article_info">
+                                        <span>
+                                            <i class="far fa-clock"></i>2023-05-15
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-thumbs-up"></i>231
+                                        </span>
+                                        <span>
+                                            <i class="far fa-eye"></i>0
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-comments"></i>0
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-star-half-alt"></i>0
+                                        </span>
+                                    </div>
+                                    <a href="">查看详情</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="card">
+                    <div class="title">
+                        <h3>独家广告</h3>
+                        <div>
+                            <a href="#">申请</a>
+                        </div>
+                    </div>
+                    <div class="body">
+                        主要内容区域
+                    </div>
+                </div>
+
+                <div class="tags card">
+                    <div class="title">
+                        <h3>标签云</h3>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                            <li>python</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">
+                        <h3>站点信息</h3>
+                    </div>
+                    <div class="body">
+                        主要内容区域
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="title">
+                        <h3>友情链接</h3>
+                    </div>
+                    <div class="body">
+                        主要内容区域
+                    </div>
+                </div>
+            </div>
+            </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div class="left">
+            <p class="thank">Thank For</p>
+            <p class="site_info">
+                <span><img src="/static/img/tencent.png" alt="">腾讯云</span>
+                <span><img src="/static/img/tencent.png" alt="">腾讯云SSL</span>
+                <span><img src="/static/img/qiniu.png" alt="">七牛云</span>
+            </p>
+            <p class="version">
+                <span>version</span>
+                <span>4.0.0</span>
+            </p>
+            <p>建站日期:2023-4-13</p>
+            <p class="beian">
+                <a href="https://beian.miit.gov.cn/"><img src="/static/img/badges.png" alt="">备案号:xxx</a>
+            </p>
+        </div>
+        <div class="right">
+            <div class="contact">
+                <div>
+                    <img class="svg" src="/static/img/qq_icon.svg" alt="">
+                    <img class="qq" src="/static/img/qq.png" alt="">
+                </div>
+                <div>
+                        <img class="svg" src="/static/img/wexin_icon.svg" alt="">
+                </div>
+                <div>
+                    <a href="https://space.bilibili.com/191881236" target="_blank">
+                        <img class="svg" src="/static/img/bilibili_icon.svg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" target="_blank">
+                        <img class="svg" src="/static/img/gitee_icon.svg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a href="#" target="_blank">
+                        <img class="svg" src="/static/img/github_icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <p>
+                联系邮箱:398727436@qq.com
+            </p>
+        </div>
+    </footer>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        delimiters: ["[[", "]]"],
+        data: {
+            theme: 'light', //默认的主题
+        },
+        created() {
+            this.init_theme()
+        },
+        methods: {
+
+            // 初始化主题
+            init_theme() {
+                // 读取存储的主题信息
+                let theme = localStorage.getItem('theme')
+                if (theme) {
+                    this.theme = theme
+                }
+            },
+
+            // 设置主题
+            setTheme(themeName) {
+                this.theme = themeName
+                // 持久化存储
+                localStorage.setItem('theme', themeName)
+            },
+
+
+        }
+    })
+
+    // 获取需要轮播的div
+    let menu_img = document.querySelectorAll('.slideshow')
+
+    // 获取它的长度
+    let menu_length = menu_img.length
+    // 初始位置
+    let index = 0
+    setInterval(() => {
+        // 下一个
+        index++
+        // 到最后一个
+        if (index === menu_length) {
+            index = 0
+        }
+        // 复位操作
+        for (let i of menu_img) {
+            i.style.opacity = '0'
+        }
+
+        menu_img[index].style.opacity = '1'
+    }, 2000)
+</script>
+</body>
+</html>
